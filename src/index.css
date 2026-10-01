@@ -1,0 +1,68 @@
+:root {
+  --verde: #2f6b4f;
+  --verde-claro: #eaf3ee;
+  --texto: #22302a;
+  --mute: #6b7a72;
+  --borde: #dbe6e0;
+  --fondo: #fbfdfc;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+.contenido { flex: 1; max-width: 1000px; margin: 0 auto; padding: 24px 20px 60px; width: 100%; }
+
+/* --- NavBar --- */
+.navbar { background: var(--verde); color: white; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.navbar .marca { font-size: 20px; font-weight: 700; }
+.navbar nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.navbar nav a { padding: 6px 4px; border-bottom: 2px solid transparent; }
+.navbar nav a.activo { border-color: white; font-weight: 700; }
+.badge { background: white; color: var(--verde); border-radius: 999px; padding: 1px 8px; font-size: 12px; font-weight: 700; margin-left: 6px; }
+
+/* --- Footer --- */
+.footer { background: #eef4f1; color: var(--mute); text-align: center; padding: 18px; font-size: 14px; margin-top: auto; }
+
+/* --- Hero --- */
+.hero { background: var(--verde-claro); border-radius: 16px; padding: 48px 32px; text-align: center; margin-bottom: 36px; }
+.hero h1 { font-size: 32px; color: var(--verde); margin-bottom: 10px; }
+.hero p { color: var(--mute); font-size: 17px; margin-bottom: 20px; }
+.hero .boton-cta { background: var(--verde); color: white; border: none; padding: 12px 22px; border-radius: 999px; font-size: 15px; font-weight: 600; }
+
+/* --- Grillas y tarjetas de producto --- */
+.grilla-productos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.tarjeta-producto { border: 1px solid var(--borde); border-radius: 14px; padding: 18px; text-align: center; background: white; display: flex; flex-direction: column; gap: 8px; }
+.tarjeta-producto-link { display: flex; flex-direction: column; gap: 8px; color: inherit; }
+.tarjeta-producto-link:hover h3 { text-decoration: underline; }
+.tarjeta-producto .emoji { font-size: 40px; }
+.tarjeta-producto .precio { color: var(--verde); font-weight: 700; }
+.tarjeta-producto button { background: var(--verde); color: white; border: none; padding: 8px 12px; border-radius: 8px; margin-top: 6px; }
+.tarjeta-producto button:hover { opacity: .9; }
+
+h2.titulo-seccion { font-size: 22px; margin-bottom: 16px; color: var(--verde); }
+
+/* --- Buscador --- */
+.buscador { width: 100%; max-width: 360px; padding: 10px 14px; border: 1px solid var(--borde); border-radius: 999px; margin-bottom: 22px; font-size: 15px; }
+
+/* --- Carrito --- */
+.item-carrito { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--borde); padding: 14px 0; gap: 12px; }
+.item-carrito .info { display: flex; align-items: center; gap: 12px; }
+.item-carrito .emoji { font-size: 28px; }
+.item-carrito .quitar { background: #fbe9e9; color: #b3382c; border: none; border-radius: 8px; padding: 6px 10px; }
+.total-carrito { display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; margin-top: 18px; padding-top: 18px; border-top: 2px solid var(--verde); }
+.vacio { color: var(--mute); text-align: center; padding: 40px 0; }
+
+/* --- Formulario de contacto --- */
+.form-contacto { display: flex; flex-direction: column; gap: 14px; max-width: 420px; }
+.form-contacto label { font-weight: 600; font-size: 14px; }
+.form-contacto input, .form-contacto textarea { padding: 10px 12px; border: 1px solid var(--borde); border-radius: 8px; font: inherit; width: 100%; }
+.form-contacto button { background: var(--verde); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 600; }
+.error-campo { color: #b3382c; font-size: 13px; font-weight: 400; margin-top: 4px; }
+.confirmacion { background: var(--verde-claro); border: 1px solid var(--verde); color: var(--verde); padding: 14px 16px; border-radius: 10px; margin-top: 16px; }
+.sin-resultados { color: var(--mute); padding: 30px 0; text-align: center; }
